@@ -1,0 +1,1 @@
+Give me a name, short description and author of a book created in {country} of the {genre} genre
