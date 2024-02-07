@@ -1,6 +1,6 @@
 # Consult a book from country and genre
 
-Simple REST service created with Spring web and [Spring AI](https://github.com/spring-projects/spring-ai) which use the [phi](https://ollama.ai/library/phi) small language model of Microsoft for consult with a short prompt a book or books based in country and genre.
+Simple REST service created with Spring web and [Spring AI](https://docs.spring.io/spring-ai/reference/index.html) which use the [phi](https://ollama.ai/library/phi) small language model of Microsoft for consult with a short prompt a book or books based in country and genre.
 This model can be runned locally with [ollama](https://github.com/ollama/ollama).
 
 ### Service definition
