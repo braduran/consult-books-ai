@@ -1,9 +1,9 @@
-# Consult a book from country and genre
+# Consult books based country and genre
 
-Simple REST service created with Spring web and [Spring AI](https://docs.spring.io/spring-ai/reference/index.html) which use the [phi](https://ollama.ai/library/phi) small language model of Microsoft for consult with a short prompt a book or books based in country and genre.
+API REST created with Spring web and [Spring AI](https://docs.spring.io/spring-ai/reference/index.html) which use the [llama2 7B](https://ollama.ai/library/llama2) small language model of Meta for consult a book or books based in country and genre.
 This model can be runned locally with [ollama](https://github.com/ollama/ollama).
 
-### Service definition
+#### 1. Simple generation
 Request
 > GET http://localhost:8080/ai/books \
 > **params:** country=_USA_&genre=_Biography_
@@ -15,10 +15,24 @@ Response
 }
 ```
 
+#### 2. Generation with output
+Request
+> GET http://localhost:8080/ai/books/output \
+> **params:** country=_France_&genre=_Science fiction_
+
+Response
+```json
+{
+  "name": "Voyage au centre de la Terre",
+  "description": "A Journey to the Center of the Earth",
+  "author": "Jules Verne"
+}
+```
+
 ### Running locally
 
 1. Start container
 > docker-compose up -d 
-2. Run phi model locally
-> docker exec -it ollama ollama run phi
+2. Run llama2 model locally
+> docker exec -it ollama ollama run llama2
 3. Run application and execute service changing the two params 
